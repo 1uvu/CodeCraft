@@ -10,21 +10,27 @@ import (
 )
 
 type SingleTest struct {
-	in  interface{}
+	A  interface{}
+	B interface{}
 	exp interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{1, 1},
-		{2, 2},
+		{[]int{1,1,3}, []int{2,2,1}, []int{1,1}},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := Foo(_t.in.(int)) // change there `in` type
-		if _res != _t.exp.(int) {
-			t.Error(_t.in, _res, _t.exp)
+		_res := fairCandySwap(_t.A.([]int), _t.B.([]int)) // change there `in` type
+		if len(_res) != len(_t.exp.([]int)){
+			t.Error(_t.A, _t.B, _res, _t.exp)
+		}
+		for i := range _res {
+			if _res[i] != _t.exp.([]int)[i] {
+				t.Error(_t.A, _t.B, _res, _t.exp)
+				break
+			}
 		}
 	}
 }
