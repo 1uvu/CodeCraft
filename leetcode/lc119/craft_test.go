@@ -12,21 +12,21 @@ import (
 )
 
 type SingleTest struct {
-	A  interface{}
-	B interface{}
+	in  interface{}
 	exp interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{[]int{1,1,3}, []int{2,2,1}, []int{1,1}},
+		{3, []int{1,3,3,1}},
+		{4, []int{1,4,6,4,1}},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := fairCandySwap(_t.A.([]int), _t.B.([]int)) // change there `in` type
+		_res := getRow(_t.in.(int)) // change there `in` type
 		if utils.CompareArray(_res, _t.exp.([]int)) {
-			t.Error(_t.A, _t.B, _res, _t.exp)
+			t.Error(_t.in, _res, _t.exp)
 		}
 	}
 }

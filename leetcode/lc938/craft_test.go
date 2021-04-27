@@ -8,24 +8,28 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/1uvu/codecraft/structures"
 	"github.com/1uvu/codecraft/utils"
 )
 
+var null = utils.NULL
+
 type SingleTest struct {
 	in  interface{}
+	low interface{}
+	high interface{}
 	exp interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{[]int{73, 74, 75, 71, 69, 72, 76, 73}, []int{1, 1, 4, 2, 1, 1, 0, 0}},
-		{[]int{42}, []int{0}},
+		{[]int{10,5,15,3,7,null,18}, 7, 15, 32},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := dailyTemperatures(_t.in.([]int)) // change there `in` type
-		if utils.CompareArray(_res, _t.exp.([]int)) {
+		_res := rangeSumBST(structures.ArrayConvertToBinaryTree(_t.in.([]int)), _t.low.(int), _t.high.(int)) // change there `in` type
+		if _res != _t.exp.(int) {
 			t.Error(_t.in, _res, _t.exp)
 		}
 	}
