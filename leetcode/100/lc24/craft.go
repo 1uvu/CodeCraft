@@ -11,7 +11,7 @@
 package leetcode
 
 import (
-	"github.com/1uvu/codecraft/structures"
+	"structures"
 )
 
 type ListNode = structures.ListNode
