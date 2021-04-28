@@ -17,7 +17,7 @@ type SingleTest struct {
 	exp interface{}
 }
 
-var null = utils.NULL
+const null int = utils.NULL
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{

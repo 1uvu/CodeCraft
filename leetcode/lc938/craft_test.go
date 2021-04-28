@@ -12,7 +12,7 @@ import (
 	"github.com/1uvu/codecraft/utils"
 )
 
-var null = utils.NULL
+const null int = utils.NULL
 
 type SingleTest struct {
 	in   interface{}

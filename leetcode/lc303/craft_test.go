@@ -14,26 +14,26 @@ import (
 const null int = utils.NULL
 
 type SingleTest struct {
-	k    interface{}
 	init interface{}
-	add  interface{}
+	in   interface{}
 	exp  interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{3, []int{4, 5, 8, 2}, []int{3, 5, 10, 9, 4}, []int{null, 4, 5, 5, 8, 8}},
+		{[]int{-2, 0, 3, -5, 2, -1}, [][2]int{{0, 2}, {2, 5}, {0, 5}}, []int{null, 1, -1, -3}},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := []int{null}
-		kth := Constructor(_t.k.(int), _t.init.([]int))
-		for _, val := range _t.add.([]int) {
-			_res = append(_res, kth.Add(val))
+		obj := Constructor(_t.init.([]int))
+		_res := make([]int, len(_t.exp.([]int)))
+		_res[0] = null
+		for i, in := range _t.in.([][2]int) {
+			_res[i+1] = obj.SumRange(in[0], in[1])
 		}
 		if !utils.CompareArray(_res, _t.exp.([]int)) {
-			t.Error(_t.k, _t.init, _t.add, _res, _t.exp)
+			t.Error(_t.in, _res, _t.exp)
 		}
 	}
 }
