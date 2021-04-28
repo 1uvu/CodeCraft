@@ -23,11 +23,11 @@ func maxSatisfied(customers []int, grumpy []int, X int) int {
 		m += x
 	}
 	_m := m
-	for ptr:=X; ptr<len(grumpy); ptr++ {
+	for ptr := X; ptr < len(grumpy); ptr++ {
 		_m = _m + grumpy[ptr] - grumpy[ptr-X]
 		if _m > m {
 			m = _m
 		}
 	}
-	return r+m
+	return r + m
 }

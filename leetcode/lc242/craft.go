@@ -14,7 +14,9 @@ func isAnagram(s string, t string) bool {
 	if len(s) != len(t) {
 		return false
 	}
-	if s == t { return true }
+	if s == t {
+		return true
+	}
 
 	var countArray [26]int
 
@@ -31,4 +33,3 @@ func isAnagram(s string, t string) bool {
 
 	return true
 }
-

@@ -5,15 +5,15 @@
 @Tags    :   []
 ---------------------------
 @Idea:
- - 
- - 
+ -
+ -
 */
 package leetcode
 
 import "math"
 
 func judgeSquareSum(c int) bool {
-	for a := 0; a * a <= c; a++ {
+	for a := 0; a*a <= c; a++ {
 		if isSquare(float64(c - a*a)) {
 			return true
 		}

@@ -11,7 +11,7 @@ package leetcode
 
 func matrixReshape(nums [][]int, r int, c int) [][]int {
 	/// 关键点：特殊情况处理、索引转换
-	if r * c != len(nums) * len(nums[0]) {
+	if r*c != len(nums)*len(nums[0]) {
 		return nums
 	}
 	if len(nums) == r && len(nums[0]) == c {
@@ -21,7 +21,7 @@ func matrixReshape(nums [][]int, r int, c int) [][]int {
 	for i := 0; i < r; i++ {
 		res[i] = make([]int, c)
 		for j := 0; j < c; j++ {
-			res[i][j] = nums[ (i*c+j) / len(nums[0]) ][ (i*c+j) % len(nums[0]) ]
+			res[i][j] = nums[(i*c+j)/len(nums[0])][(i*c+j)%len(nums[0])]
 		}
 	}
 	return res

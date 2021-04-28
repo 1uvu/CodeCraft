@@ -14,10 +14,10 @@ import "sort"
 
 func fairCandySwap(A []int, B []int) []int {
 	avg := 0
-	for i:=0; i<len(A); i++ {
+	for i := 0; i < len(A); i++ {
 		avg += A[i]
 	}
-	for j:=0; j<len(B); j++ {
+	for j := 0; j < len(B); j++ {
 		avg -= B[j]
 	}
 	avg /= 2
@@ -25,10 +25,10 @@ func fairCandySwap(A []int, B []int) []int {
 	sort.Ints(B)
 	Ai := 0
 	Bi := 0
-	for A[Ai] - B[Bi] != avg {
-		if A[Ai] - B[Bi] > avg {
+	for A[Ai]-B[Bi] != avg {
+		if A[Ai]-B[Bi] > avg {
 			Bi++
-		} else if A[Ai] - B[Bi] < avg {
+		} else if A[Ai]-B[Bi] < avg {
 			Ai++
 		} else {
 			break

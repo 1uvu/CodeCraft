@@ -12,14 +12,14 @@ import (
 )
 
 type SingleTest struct {
-	A  interface{}
-	B interface{}
+	A   interface{}
+	B   interface{}
 	exp interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{[]int{1,1,3}, []int{2,2,1}, []int{1,1}},
+		{[]int{1, 1, 3}, []int{2, 2, 1}, []int{1, 1}},
 		// ...
 	}
 	fmt.Println("begin testing...")

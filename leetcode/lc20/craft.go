@@ -11,7 +11,6 @@
 */
 package leetcode
 
-
 func isValid(s string) bool {
 	stack := make([]byte, len(s))
 	top := -1
@@ -23,9 +22,9 @@ func isValid(s string) bool {
 		}
 		switch stack[top] {
 		case '{':
-			if s[i] == '}' {  // 匹配则将栈顶指针指向的元素弹出
+			if s[i] == '}' { // 匹配则将栈顶指针指向的元素弹出
 				top--
-			} else {    // 不匹配则将当前元素入栈
+			} else { // 不匹配则将当前元素入栈
 				top++
 				stack[top] = s[i]
 			}

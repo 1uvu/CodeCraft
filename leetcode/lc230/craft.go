@@ -34,4 +34,3 @@ func kthSmallest(root *TreeNode, k int) int {
 	order(root)
 	return ans
 }
-

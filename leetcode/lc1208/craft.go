@@ -10,25 +10,25 @@
 package leetcode
 
 func equalSubstring(s string, t string, maxCost int) int {
-	maxLen :=0
+	maxLen := 0
 	curCost := 0
-	l:= 0
+	l := 0
 
 	for r := 0; r < len(s); r++ {
 		curCost += abs(int(t[r]) - int(s[r]))
 		if curCost <= maxCost {
-			if r + 1 < len(s) {
-				if curCost + abs(int(t[r+1]) - int(s[r+1])) > maxCost && r-l+1 >= maxLen {
-					maxLen = r-l+1
+			if r+1 < len(s) {
+				if curCost+abs(int(t[r+1])-int(s[r+1])) > maxCost && r-l+1 >= maxLen {
+					maxLen = r - l + 1
 				}
 			} else {
 				if r-l+1 >= maxLen {
-					maxLen = r-l+1
+					maxLen = r - l + 1
 				}
 			}
 
 		} else {
-			curCost = curCost - abs(int(t[l]) - int(s[l]))
+			curCost = curCost - abs(int(t[l])-int(s[l]))
 			l++
 		}
 	}

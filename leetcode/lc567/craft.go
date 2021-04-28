@@ -17,14 +17,14 @@ func checkInclusion(s1 string, s2 string) bool {
 
 	r := len(s1)
 	C1, C2 := make([]int, 26), make([]int, 26)
-	for i:=0; i<len(s1); i++ {
+	for i := 0; i < len(s1); i++ {
 		C1[s1[i]-'a']++
 		C2[s2[:r][i]-'a']++
 	}
 	if compare(C1, C2) {
 		return true
 	}
-	for r<len(s2) {
+	for r < len(s2) {
 		C2[s2[r]-'a']++
 		C2[s2[r-len(s1)]-'a']--
 		if compare(C1, C2) {
@@ -37,7 +37,7 @@ func checkInclusion(s1 string, s2 string) bool {
 }
 
 func compare(C1 []int, C2 []int) bool {
-	for i:=0; i<len(C1); i++ {
+	for i := 0; i < len(C1); i++ {
 		if C1[i] != C2[i] {
 			return false
 		}

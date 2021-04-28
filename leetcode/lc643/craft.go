@@ -15,12 +15,12 @@ func findMaxAverage(nums []int, k int) float64 {
 		ms += x
 	}
 	_ms := ms
-	for r:=k; r<len(nums); r++ {
+	for r := k; r < len(nums); r++ {
 		_ms = _ms - nums[r-k] + nums[r]
 		if _ms > ms {
 			ms = _ms
 		}
 	}
 
-	return float64(ms)/float64(k)
+	return float64(ms) / float64(k)
 }

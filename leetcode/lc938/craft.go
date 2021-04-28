@@ -16,7 +16,7 @@ import (
 type TreeNode = structures.BNode
 
 func rangeSumBST(root *TreeNode, low int, high int) int {
-	if root== nil {
+	if root == nil {
 		return 0
 	}
 	res := 0

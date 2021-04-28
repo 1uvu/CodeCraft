@@ -12,7 +12,7 @@ package leetcode
 
 func isToeplitzMatrix(matrix [][]int) bool {
 	m, n := len(matrix), len(matrix[0])
-	for i:=0; i<m-1; i++ {
+	for i := 0; i < m-1; i++ {
 		step := 1
 		target := matrix[i][0]
 		for step < n && step < m-i {
@@ -23,7 +23,7 @@ func isToeplitzMatrix(matrix [][]int) bool {
 			step++
 		}
 	}
-	for i:=1; i<n-1; i++ {
+	for i := 1; i < n-1; i++ {
 		step := 1
 		target := matrix[0][i]
 		for step < m && step < n-i {

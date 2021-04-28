@@ -21,8 +21,8 @@ var null = utils.NULL
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{[]int{1,null,2,null,5,4}, []int{1,null,2,null,4,null,5}},
-		{[]int{5,3,6,2,4,null,8,1,null,null,null,7,9}, []int{1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9}},
+		{[]int{1, null, 2, null, 5, 4}, []int{1, null, 2, null, 4, null, 5}},
+		{[]int{5, 3, 6, 2, 4, null, 8, 1, null, null, null, 7, 9}, []int{1, null, 2, null, 3, null, 4, null, 5, null, 6, null, 7, null, 8, null, 9}},
 		// ...
 	}
 	fmt.Println("begin testing...")

@@ -10,10 +10,10 @@ import (
 )
 
 type SingleTest struct {
-	s1  interface{}
-	s2  interface{}
+	s1      interface{}
+	s2      interface{}
 	maxCost interface{}
-	exp interface{}
+	exp     interface{}
 }
 
 func Test(t *testing.T) { // rename function

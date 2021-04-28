@@ -11,7 +11,7 @@ package leetcode
 
 func maximumScore(a int, b int, c int) int {
 	m := max(a, b, c)
-	if a + b + c <= 2 * m {
+	if a+b+c <= 2*m {
 		return (a + b + c) - m
 	} else {
 		return (a + b + c) >> 1

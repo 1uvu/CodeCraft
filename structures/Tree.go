@@ -16,7 +16,7 @@ func ArrayConvertToBinaryTree(nums []int) *BNode {
 		return nil
 	}
 	root := &BNode{nums[0], nil, nil}
-	queue := make([]*BNode, 1, n * 2)  // 叶子节点的子节点为 NULL
+	queue := make([]*BNode, 1, n*2) // 叶子节点的子节点为 NULL
 	queue[0] = root
 
 	i := 1
@@ -41,18 +41,18 @@ func ArrayConvertToBinaryTree(nums []int) *BNode {
 }
 
 func InorderTraverseBinaryTree(root *BNode) []interface{} {
-		var ans []interface{}
-		var traverse func(node *BNode)
-		traverse = func(root *BNode) {
-			if root == nil {
-				return
-			}
-			traverse(root.Left)
-			ans = append(ans, root.Val)
-			traverse(root.Right)
+	var ans []interface{}
+	var traverse func(node *BNode)
+	traverse = func(root *BNode) {
+		if root == nil {
+			return
 		}
-		traverse(root)
-		return ans
+		traverse(root.Left)
+		ans = append(ans, root.Val)
+		traverse(root.Right)
+	}
+	traverse(root)
+	return ans
 }
 
 func IsBinaryTreeInOrderEqual(r1, r2 *BNode) bool {

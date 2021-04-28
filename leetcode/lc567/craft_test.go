@@ -17,8 +17,8 @@ type SingleTest struct {
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{"ab", "eidbaooo",true},
-		{"ect","leetcode",true},
+		{"ab", "eidbaooo", true},
+		{"ect", "leetcode", true},
 		// ...
 	}
 	fmt.Println("begin testing...")

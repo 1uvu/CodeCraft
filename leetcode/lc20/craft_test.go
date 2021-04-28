@@ -22,8 +22,8 @@ func Test(t *testing.T) { // rename function
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := isValid(_t.in.(string))  // change there `in` type
-		if _res != _t.exp.(bool) {  // change there `exp` type
+		_res := isValid(_t.in.(string)) // change there `in` type
+		if _res != _t.exp.(bool) {      // change there `exp` type
 			t.Error(_t.in, _res, _t.exp)
 		}
 	}

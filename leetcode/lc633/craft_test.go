@@ -16,8 +16,8 @@ type SingleTest struct {
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{2,true},
-		{3,false},
+		{2, true},
+		{3, false},
 		{10, true},
 		{27, false},
 		// ...

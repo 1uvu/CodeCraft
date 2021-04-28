@@ -19,7 +19,7 @@ func increasingBST(root *TreeNode) *TreeNode {
 	tummy := &TreeNode{-1, nil, nil}
 	node := &TreeNode{a[0].(int), nil, nil}
 	tummy.Right = node
-	for i:=1; i<len(a); i++ {
+	for i := 1; i < len(a); i++ {
 		node.Left = nil
 		node.Right = &TreeNode{a[i].(int), nil, nil}
 		node = node.Right

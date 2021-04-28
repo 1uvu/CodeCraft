@@ -6,14 +6,16 @@
 ---------------------------
 @Idea:
  - 轮转之后，找到一个中间的 index，index 前面为递减，后面为递增
- - 
+ -
 */
 package leetcode
 
 func check(nums []int) bool {
-	if len(nums) < 3 { return true }
+	if len(nums) < 3 {
+		return true
+	}
 	index := 0
-	for index<len(nums) {
+	for index < len(nums) {
 		if index == 0 {
 			if nums[index] > nums[index+1] {
 				index++
@@ -36,7 +38,7 @@ func check(nums []int) bool {
 
 func judge(nums []int) bool {
 	i := 0
-	for i<len(nums)-1 {
+	for i < len(nums)-1 {
 		if nums[i] > nums[i+1] {
 			return false
 		}

@@ -1,7 +1,7 @@
 package structures
 
 type ListNode struct {
-	Val interface{}
+	Val  interface{}
 	Next *ListNode
 }
 
@@ -11,7 +11,7 @@ func ArrayConvertToLinkedList(nums []int) *ListNode {
 	}
 	head := &ListNode{nums[0], nil}
 	cur := head
-	for i:=1; i<len(nums); i++ {
+	for i := 1; i < len(nums); i++ {
 		cur.Next = &ListNode{nums[i], nil}
 		cur = cur.Next
 	}

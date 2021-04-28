@@ -12,7 +12,7 @@ package leetcode
 
 func sumOfUnique(nums []int) int {
 	freq := make([]int, 100)
-	for i:=0; i<len(nums); i++ {
+	for i := 0; i < len(nums); i++ {
 		freq[nums[i]-1]++
 		if freq[nums[i]-1] != 1 {
 			if freq[nums[i]-1] != -1 {
@@ -22,9 +22,9 @@ func sumOfUnique(nums []int) int {
 		}
 	}
 	sum := 0
-	for i:=0; i<100; i++ {
+	for i := 0; i < 100; i++ {
 		if freq[i] == 1 {
-			sum += i+1
+			sum += i + 1
 		}
 	}
 	return sum

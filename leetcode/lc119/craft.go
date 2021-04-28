@@ -14,7 +14,7 @@ func getRow(rowIndex int) []int {
 	row := make([]int, rowIndex+1)
 	row[0] = 1
 	row[rowIndex] = 1
-	for i:=1; i<rowIndex/2+1; i++ {
+	for i := 1; i < rowIndex/2+1; i++ {
 		row[i] = row[i-1] * (rowIndex - i + 1) / i
 		row[rowIndex-i] = row[i]
 	}

@@ -41,7 +41,7 @@ func freq(s string) map[rune]int {
 }
 
 func max(a int, b int) int {
-	if a>b {
+	if a > b {
 		return a
 	} else {
 		return b
@@ -54,7 +54,7 @@ func split(s string, ch rune) []string {
 	for i, _ch := range s {
 		if _ch == ch {
 			sArray = append(sArray, s[begin:i])
-			begin = i+1
+			begin = i + 1
 		}
 	}
 	sArray = append(sArray, s[begin:len(s)])

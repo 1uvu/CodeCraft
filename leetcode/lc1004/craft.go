@@ -19,7 +19,7 @@ func longestOnes(A []int, K int) int {
 	l, r := 0, 0
 	for r < len(A) {
 		for r < len(A) && sum <= K {
-			sum += A[r]^1
+			sum += A[r] ^ 1
 			r++
 		} // 右指针前移，此循环后 sum > K，也就是 sum = K+1
 
@@ -31,10 +31,10 @@ func longestOnes(A []int, K int) int {
 		}
 		if r-l-1 > res {
 			// 记录最长子数组
-			res = r-l-1
+			res = r - l - 1
 		}
 		for l < r && sum > K {
-			sum -= A[l]^1
+			sum -= A[l] ^ 1
 			l++
 		} // 左指针前移，此循环后 sum == K
 	}

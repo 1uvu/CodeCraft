@@ -11,13 +11,13 @@ import (
 
 type SingleTest struct {
 	in  interface{}
-	k  interface{}
+	k   interface{}
 	exp interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{"aaaddb",2, 5},
+		{"aaaddb", 2, 5},
 		// ...
 	}
 	fmt.Println("begin testing...")

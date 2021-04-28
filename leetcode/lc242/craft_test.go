@@ -10,8 +10,8 @@ import (
 )
 
 type SingleTest struct {
-	s1  string
-	s2  string
+	s1 string
+	s2 string
 }
 
 func Test(t *testing.T) { // rename function
@@ -23,7 +23,7 @@ func Test(t *testing.T) { // rename function
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
 		_res := isAnagram(_t.s1, _t.s2) // change there `in` type
-		if !_res {    // change there `exp` type
+		if !_res {                      // change there `exp` type
 			t.Error(_t.s1, _t.s2, _res)
 		}
 	}

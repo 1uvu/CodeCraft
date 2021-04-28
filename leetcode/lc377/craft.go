@@ -23,7 +23,7 @@ func combinationSum4(nums []int, target int) int {
 	for i <= target {
 		for _, x := range nums {
 			if i >= x {
-				dp[i] += dp[i - x]
+				dp[i] += dp[i-x]
 			}
 		}
 		i++

@@ -25,7 +25,7 @@ func shipWithinDays(weights []int, D int) int {
 		right += w
 	}
 	// 返回二分查找成功的第一个结果
-	return left + sort.Search(right - left, func(x int) bool {
+	return left + sort.Search(right-left, func(x int) bool {
 		// x 是 [0, right - left] 内的一个数字
 		// x += left 代表着当前设置的运载容量
 		// 判断传入的 x + left 是否能够在 D 天内运输完
@@ -34,7 +34,7 @@ func shipWithinDays(weights []int, D int) int {
 		day := 1 // 需要运送的天数
 		sum := 0 // 当前这一天已经运送的包裹重量之和
 		for _, w := range weights {
-			if sum + w > x {
+			if sum+w > x {
 				day++
 				sum = 0
 			}

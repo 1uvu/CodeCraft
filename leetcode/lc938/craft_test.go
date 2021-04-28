@@ -15,15 +15,15 @@ import (
 var null = utils.NULL
 
 type SingleTest struct {
-	in  interface{}
-	low interface{}
+	in   interface{}
+	low  interface{}
 	high interface{}
-	exp interface{}
+	exp  interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{[]int{10,5,15,3,7,null,18}, 7, 15, 32},
+		{[]int{10, 5, 15, 3, 7, null, 18}, 7, 15, 32},
 		// ...
 	}
 	fmt.Println("begin testing...")

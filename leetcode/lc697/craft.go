@@ -33,7 +33,7 @@ func findShortestSubArray(nums []int) int {
 	}
 	minLen := len(nums)
 	for key := range freqMap {
-		if freqMap[key] == maxFreq && rightMap[key] - leftMap[key] + 1 < minLen {
+		if freqMap[key] == maxFreq && rightMap[key]-leftMap[key]+1 < minLen {
 			minLen = rightMap[key] - leftMap[key] + 1
 		}
 	}

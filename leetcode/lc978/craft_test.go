@@ -16,8 +16,8 @@ type SingleTest struct {
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{[]int{9,4,2,10,7,8,8,1,9}, 5},
-		{[]int{4,8,12,16}, 2},
+		{[]int{9, 4, 2, 10, 7, 8, 8, 1, 9}, 5},
+		{[]int{4, 8, 12, 16}, 2},
 		// ...
 	}
 	fmt.Println("begin testing...")

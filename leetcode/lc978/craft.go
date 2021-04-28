@@ -15,14 +15,14 @@ func maxTurbulenceSize(arr []int) int {
 	if len(arr) == 1 {
 		return 1
 	}
-	flag := true  // 用来判断全部相等的情况
+	flag := true // 用来判断全部相等的情况
 	m, _m := 0, 0
 	for r := 0; r < len(arr)-1; r++ {
 		arr[r] = compare(arr[r], arr[r+1])
 		if arr[r] != 0 {
 			flag = false
 		}
-		if r > 0 && arr[r] != 0 && arr[r] + arr[r-1] == 0 {
+		if r > 0 && arr[r] != 0 && arr[r]+arr[r-1] == 0 {
 			_m++
 		} else {
 			_m = 0
