@@ -7,26 +7,25 @@ package leetcode
 import (
 	"fmt"
 	"testing"
-
-	"github.com/1uvu/codecraft/utils"
 )
 
 type SingleTest struct {
-	in  interface{}
+	customers  interface{}
+	grumpy  interface{}
+	X  interface{}
 	exp interface{}
 }
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{3, []int{1,3,3,1}},
-		{4, []int{1,4,6,4,1}},
+		{[]int{1,0,1,2,1,1,7,5}, []int{0,1,0,1,0,1,0,1},3,16},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := getRow(_t.in.(int)) // change there `in` type
-		if !utils.CompareArray(_res, _t.exp.([]int)) {
-			t.Error(_t.in, _res, _t.exp)
+		_res := maxSatisfied(_t.customers.([]int),_t.grumpy.([]int),_t.X.(int)) // change there `in` type
+		if _res != _t.exp.(int) {
+			t.Error(_t.customers,_t.grumpy,_t.X, _res, _t.exp)
 		}
 	}
 }

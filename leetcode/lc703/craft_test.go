@@ -32,7 +32,7 @@ func Test(t *testing.T) { // rename function
 		for _, val := range _t.add.([]int) {
 			_res = append(_res, kth.Add(val))
 		}
-		if utils.CompareArray(_res, _t.exp.([]int)) {
+		if !utils.CompareArray(_res, _t.exp.([]int)) {
 			t.Error(_t.k, _t.init, _t.add, _res, _t.exp)
 		}
 	}

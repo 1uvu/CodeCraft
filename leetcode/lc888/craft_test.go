@@ -25,7 +25,7 @@ func Test(t *testing.T) { // rename function
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
 		_res := fairCandySwap(_t.A.([]int), _t.B.([]int)) // change there `in` type
-		if utils.CompareArray(_res, _t.exp.([]int)) {
+		if !utils.CompareArray(_res, _t.exp.([]int)) {
 			t.Error(_t.A, _t.B, _res, _t.exp)
 		}
 	}

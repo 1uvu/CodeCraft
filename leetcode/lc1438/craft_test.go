@@ -7,8 +7,6 @@ package leetcode
 import (
 	"fmt"
 	"testing"
-
-	"github.com/1uvu/codecraft/utils"
 )
 
 type SingleTest struct {
@@ -18,14 +16,14 @@ type SingleTest struct {
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{3, []int{1,3,3,1}},
-		{4, []int{1,4,6,4,1}},
+		{1, 1},
+		{2, 2},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := getRow(_t.in.(int)) // change there `in` type
-		if !utils.CompareArray(_res, _t.exp.([]int)) {
+		_res := Todo(_t.in.(int)) // change there `in` type
+		if _res != _t.exp.(int) {
 			t.Error(_t.in, _res, _t.exp)
 		}
 	}

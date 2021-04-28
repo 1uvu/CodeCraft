@@ -25,7 +25,7 @@ func Test(t *testing.T) { // rename function
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
 		_res := dailyTemperatures(_t.in.([]int)) // change there `in` type
-		if utils.CompareArray(_res, _t.exp.([]int)) {
+		if !utils.CompareArray(_res, _t.exp.([]int)) {
 			t.Error(_t.in, _res, _t.exp)
 		}
 	}

@@ -26,6 +26,5 @@ func CompareMatrix(a, b [][]int) bool {
 			}
 		}
 	}
-
 	return true
 }

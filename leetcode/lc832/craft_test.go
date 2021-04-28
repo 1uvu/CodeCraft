@@ -18,14 +18,13 @@ type SingleTest struct {
 
 func Test(t *testing.T) { // rename function
 	tests := []SingleTest{
-		{3, []int{1,3,3,1}},
-		{4, []int{1,4,6,4,1}},
+		{[][]int{{1,1,0},{1,0,1},{0,0,0}}, [][]int{{1,1,0},{1,0,1},{0,0,0}}},
 		// ...
 	}
 	fmt.Println("begin testing...")
 	for _, _t := range tests {
-		_res := getRow(_t.in.(int)) // change there `in` type
-		if !utils.CompareArray(_res, _t.exp.([]int)) {
+		_res := flipAndInvertImage(_t.in.([][]int)) // change there `in` type
+		if !utils.CompareMatrix(_res, _t.exp.([][]int)) {
 			t.Error(_t.in, _res, _t.exp)
 		}
 	}
