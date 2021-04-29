@@ -1,7 +1,7 @@
 /* -*- encoding: utf-8 -*- */
 /*
 @File    :   craft.go
-@URL     :   ""
+@URL     :   "https://leetcode-cn.com/problems/implement-queue-using-stacks/"
 @Tags    :   [栈，队列]
 ---------------------------
 @Idea:
