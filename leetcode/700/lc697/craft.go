@@ -2,7 +2,7 @@
 /*
 @File    :   craft.go
 @URL     :   "https://leetcode-cn.com/problems/degree-of-an-array/submissions/"
-@Tags    :   [哈希表]
+@Tags    :   [Map]
 ---------------------------
 @Idea:
  - leftMap 存储元素第一次出现的位置

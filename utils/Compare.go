@@ -16,11 +16,40 @@ func CompareMatrix(a, b [][]int) bool {
 	if len(a) != len(b) {
 		return false
 	}
-	if len(a[0]) != len(b[0]) {
+	for i := range a {
+		if len(a[i]) != len(b[i]) {
+			return false
+		}
+		for j := range a[i] {
+			if a[i][j] != b[i][j] {
+				return false
+			}
+		}
+	}
+	return true
+}
+
+func CompareStringArray(a, b []string) bool {
+	if len(a) != len(b) {
 		return false
 	}
 	for i := range a {
-		for j := range a[0] {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
+}
+
+func CompareStringMatrix(a, b [][]string) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if len(a[i]) != len(b[i]) {
+			return false
+		}
+		for j := range a[i] {
 			if a[i][j] != b[i][j] {
 				return false
 			}

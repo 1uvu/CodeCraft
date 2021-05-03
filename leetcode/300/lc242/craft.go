@@ -2,7 +2,7 @@
 /*
 @File    :   craft.go
 @URL     :   "https://leetcode-cn.com/problems/valid-anagram/"
-@Tags    :   [哈希表]
+@Tags    :   [Map]
 ---------------------------
 @Idea:
  - 使用长度为 26 的数组来对字母进行计数：同时出现为 0 否则为 1/-1
